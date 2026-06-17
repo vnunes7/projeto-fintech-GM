@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Dashboard | Fintech GM</title>
+</head>
+
+
+<body>
+    <div class="flex h-screen w-screen bg-[#F4F4F4]">
+        <aside id="sidebar"
+            class=" bg-red-500 w-64 hidden lg:flex lg:flex-col">
+            <header class="p-6">
+                <img src="./dist/image/Component 1@2x.png" alt="Logo Escrito FINTECH Gestão+"
+                    class="w-2xs mt-24 mx-auto ">
+            </header>
+            <nav class="text-lg px-5">
+                <ul class="">
+                    <li class="border-b-black py-3 px-4 rounded mt-4 cursor-pointer">
+                        <a href="#" style="text-decoration:none;" class="text-white"><i
+                                class="fa-solid fa-house fa-lg mr-2"></i>Painel</a>
+                    </li>
+                    <li class="py-3 px-4 rounded mt-4 cursor-pointer ">
+                        <a href="#" style="text-decoration:none;" class="text-white"><i
+                                class="fa-solid fa-wallet fa-lg mr-2"></i>Dívidas</a>
+                    </li>
+                    <li class="py-3 px-4 rounded mt-4 cursor-pointer ">
+                        <a href="#" style="text-decoration:none;" class="text-white"><i
+                                class="fa-solid fa-chart-bar fa-lg mr-2"></i>Simulador</a>
+                    </li>
+                    <li class="py-3 px-4 rounded mt-4 cursor-pointer">
+                        <a href="#" style="text-decoration:none;" class="text-white"><i
+                                class="fa-solid fa-user fa-lg mr-2"></i>Perfil</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="w-full flex flex-col pb-20 lg:pb-0 lg:flex lg:justify-center lg:items-center">
+            <!-- Menu Mobile -->
+
+
+            <div
+                class="flex flex-col gap-2 pt-6 px-4 lg:pt-8 lg:px-8 overflow-auto border w-full h-full lg:w-[95%] lg:h-[95%] shadow-3xl rounded-none lg:rounded-2xl bg-white">
+                <section class="flex flex-col gap-4 lg:flex-row lg:justify-between lg:items-center my-6 lg:my-10">
+                    <div>
+                        <h1 class="text-2xl lg:text-4xl font-body font-bold">Olá, [Nome Usuário]</h1>
+                        <p class="text-lg text-gray-500">Seu resumo financeiro hoje:</p>
+                    </div>
+                    <button type="button"
+                        class="bg-red-500 text-white px-6 py-2 rounded-lg text-lg font-bold hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
+                        Cadastrar Dívida <i class="fa-solid fa-plus fa-lg ml-2 text-white"></i></button>
+                </section>
+
+                <!-- Cards de informações -->
+                <section class="grid grid-cols-1 lg:grid-cols-3 gap-7 mb-5">
+                    <div class="flex flex-col rounded-lg p-4 border">
+                        <span class="text-xl font-body font-bold ml-2 pb-6">Valor Total da Divida</span>
+                        <div class="flex flex-col items-center justify-center py-4">
+                            <img src="./dist/image/grafico-valor-divida.png"
+                                alt="Imagem de grafico subindo exponencialmente" class="">
+                            <span class="text-2xl font-body font-bold pt-2 ">R$ 15.750,00</span>
+                        </div>
+                        <div class=" bg-red-500 rounded-full border h-2.5 dark:bg-white ">
+                            <div class="bg-red-500 h-2.5 rounded-full" style="width: 80%;"></div>
+
+                        </div>
+                    </div>
+                    <div class="flex flex-col rounded-lg p-4 border ">
+                        <span class="text-xl font-body font-bold ml-2 pb-3">Progresso</span>
+                        <div class="flex flex-col items-center justify-center py-4 gap-2">
+
+                            <!-- O círculo SVG -->
+                            <div class="relative w-32 h-32">
+                                <svg viewBox="0 0 36 36" class="w-full h-full -rotate-90">
+                                    <!-- Círculo de fundo (cinza) -->
+                                    <circle cx="18" cy="18" r="15.9" fill="none" stroke="#e5e7eb" stroke-width="3" />
+                                    <!-- Círculo de progresso (vermelho) -->
+                                    <circle cx="18" cy="18" r="15.9" fill="none" stroke="#ef4444" stroke-width="3"
+                                        stroke-dasharray="65 35" stroke-linecap="round" />
+                                </svg>
+                                <!-- Texto no centro -->
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span class="text-2xl font-bold">65%</span>
+                                    <span class="text-xs text-gray-700">Quitado</span>
+                                </div>
+                            </div>
+
+                            <span class="text-sm text-gray-500 font-medium">Você está no caminho certo!</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col rounded-lg p-4 border">
+                        <span class="text-xl font-body font-bold pl-2">Próximo Vencimento</span>
+                        <div class="flex flex-col items-center justify-center flex-1 gap-2">
+                            <span class="text-7xl">29</span>
+                            <p class="text-2xl text-gray-700">ABRIL</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl xl:text-2xl font-bold pl-2">R$ 1.500</p>
+                            <p class="text-xl xl:text-2xl font-mono">BANCO XXXX</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Campo de Pesquisar Dívida -->
+                <section class="flex flex-col pl-2">
+                    <h2 class="text-2xl font-bold pb-2">Dívidas Recentes</h2>
+                    <form name="form-search" id="form-search" method="get" class="form-search flex gap-1 mb-4">
+                        <div class="filter-search flex items-center px-3 py-2 gap-2 w-[30%] border-2 border-gray-600 rounded focus-within:border-red-600"
+                            id="filter-search" name="filter-search">
+                            <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                            <input type="search" name="filter-search" id="filter-search" placeholder="Buscar dívida ..."
+                                class="filter-search outline-none text-sm text-gray-500 w-full">
+                        </div>
+                        <button type="submit" id="btn-search" name="btn-search"
+                            class="group btn flex items-center gap-2 border rounded px-3 py-2 text-sm bg-gray-200 hover:bg-red-500 hover:duration-100 hover:border-gray-400">
+                            <i
+                                class="fa-solid fa-filter text-gray-500 pointer-events-none group-hover:text-white group-hover:duration-100"></i>
+                            <span class="group-hover:text-white group-hover:duration-100">Filtrar</span>
+                        </button>
+                    </form>
+                </section>
+                <section>
+                    <div class="overflow-x-auto md:overflow-hidden pb-7">
+                        <table class="w-[95%] md:w-full text-left border mx-auto">
+                            <thead class="bg-[#878787]/30">
+                                <tr class="text-lg md:text-xl">
+                                    <th class="px-4 py-6 text font-bold text-gray-700">Dívida</th>
+                                    <th class="px-4 py-6 text font-bold text-gray-700">Vencimento</th>
+                                    <th class="px-4 py-6 text font-bold text-gray-700">Status</th>
+                                    <th class="px-4 py-6 text font-bold text-gray-700">Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50 text-sm md:text-lg">
+                                    <td class="px-4 py-5">Renegociação Banco X</td>
+                                    <td>29 ABR</td>
+                                    <td>
+                                        <span><i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>
+                                            Próximo
+                                            ao
+                                            Vencimento</span>
+                                    </td>
+                                    <td><span class="font-bold">R$ 1.500</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50 py-5 text-sm md:text-lg">
+                                    <td class="px-4 py-5">Dívida Cartão de Crédito</td>
+                                    <td>20 MAI</td>
+                                    <td><span><i class="fa-solid fa-circle-check text-green-500"></i> Em dia</span>
+                                    </td>
+                                    <td><span class="font-bold">R$ 700</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 text-sm md:text-lg">
+                                    <td class="px-4 py-5">Dívida Banco Y</td>
+                                    <td>10 FEV</td>
+                                    <td><span><i class="fa-solid fa-circle-exclamation text-red-500"></i>
+                                            Atrasada</span></td>
+                                    <td><span class="font-bold">R$ 1.289,96</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <nav class="lg:hidden fixed bottom-0 left-0 w-full bg-red-500 z-50 px-4 py-3">
+        <div class="flex items-center justify-around">
+            <a href="#" style="text-decoration:none;" class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-house text-white text-xl"></i>
+                <span class="text-white text-xs">Painel</span>
+            </a>
+            <a href="#" style="text-decoration:none;" class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-wallet text-white text-xl"></i>
+                <span class="text-white text-xs">Dívidas</span>
+            </a>
+            <a href="#" style="text-decoration:none;" class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-chart-bar text-white text-xl"></i>
+                <span class="text-white text-xs">Simulador</span>
+            </a>
+            <a href="#" style="text-decoration:none;" class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-user text-white text-xl"></i>
+                <span class="text-white text-xs">Perfil</span>
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>
