@@ -31,7 +31,7 @@ HTML e Tailwind CSS, sem frameworks JavaScript.
 
 ## 📁 Estrutura do projeto
 
- fintech-gestao/
+ fintech-gestao/  
     ├── src/  
     │   └── input.css  
     ├── dist/  
