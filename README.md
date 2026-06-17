@@ -32,14 +32,14 @@ HTML e Tailwind CSS, sem frameworks JavaScript.
 ## 📁 Estrutura do projeto
 
  fintech-gestao/
-    ├── src/
-    │   └── input.css
-    ├── dist/
-    │   ├── css/
-    │   │   └── styles.css
-    │   └── image/
-    ├── index.html
-    └── package.json
+    ├── src/  
+    │   └── input.css  
+    ├── dist/  
+    │   ├── css/  
+    │   │   └── styles.css  
+    │   └── image/  
+    ├── index.html  
+    └── package.json  
 
 ## 👨‍💻 Autor
 
