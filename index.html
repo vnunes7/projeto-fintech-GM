@@ -43,11 +43,10 @@
             <!-- Menu Mobile -->
 
 
-            <div
-                class="flex flex-col gap-2 pt-6 px-4 lg:pt-8 lg:px-8 overflow-auto border w-full h-full lg:w-[95%] lg:h-[95%] shadow-3xl rounded-none lg:rounded-2xl bg-white">
-                <section class="flex flex-col gap-4 lg:flex-row lg:justify-between lg:items-center my-6 lg:my-10">
+            <div class="flex flex-col gap-2 pt-6 px-4 lg:pt-4 lg:px-6 overflow-auto border w-full h-full lg:w-[95%] lg:h-max-[95%] shadow-3xl rounded-none lg:rounded-2xl bg-white">
+                <section class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-center my-4 lg:my-6">
                     <div>
-                        <h1 class="text-2xl lg:text-4xl font-body font-bold">Olá, [Nome Usuário]</h1>
+                        <h1 class="text-2xl md:text-3xl xl:text-4xl font-body font-bold">Olá, [Nome Usuário]</h1>
                         <p class="text-lg text-gray-500">Seu resumo financeiro hoje:</p>
                     </div>
                     <button type="button"
@@ -95,7 +94,7 @@
                     <div class="flex flex-col rounded-lg p-4 border">
                         <span class="text-xl font-body font-bold pl-2">Próximo Vencimento</span>
                         <div class="flex flex-col items-center justify-center flex-1 gap-2">
-                            <span class="text-7xl">29</span>
+                            <span class="text-5xl lg:text-6xl xl:text-7xl">29</span>
                             <p class="text-2xl text-gray-700">ABRIL</p>
                         </div>
                         <div class="flex justify-between items-center">
@@ -123,15 +122,17 @@
                         </button>
                     </form>
                 </section>
+
+                <!-- Tabela de Dívidas -->
                 <section>
                     <div class="overflow-x-auto md:overflow-hidden pb-7">
                         <table class="w-[95%] md:w-full text-left border mx-auto">
                             <thead class="bg-[#878787]/30">
                                 <tr class="text-lg md:text-xl">
-                                    <th class="px-4 py-6 text font-bold text-gray-700">Dívida</th>
-                                    <th class="px-4 py-6 text font-bold text-gray-700">Vencimento</th>
-                                    <th class="px-4 py-6 text font-bold text-gray-700">Status</th>
-                                    <th class="px-4 py-6 text font-bold text-gray-700">Valor</th>
+                                    <th class="px-4 py-3 xl:py-5 text font-bold text-gray-700">Dívida</th>
+                                    <th class="px-4 py-3 xl:py-5 text font-bold text-gray-700">Vencimento</th>
+                                    <th class="px-4 py-3 xl:py-5 text font-bold text-gray-700">Status</th>
+                                    <th class="px-4 py-3 xl:py-5 text font-bold text-gray-700">Valor</th>
                                 </tr>
                             </thead>
                             <tbody>

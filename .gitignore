@@ -1,0 +1,15 @@
+# Dependências
+node_modules/
+
+# Logs do npm
+npm-debug.log*
+package-lock.json
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.suo
+*.user
