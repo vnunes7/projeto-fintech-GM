@@ -37,8 +37,8 @@ HTML e Tailwind CSS, sem frameworks JavaScript.
     ├── dist/  
     │   ├── css/  
     │   │   └── styles.css  
-    │   └── image/  
-    ├── index.html  
+    │   ├── image/  
+    │   └── index.html  
     └── package.json  
 
 ## 👨‍💻 Autor
